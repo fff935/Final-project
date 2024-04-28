@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+  }
+  a{
+    text-decoration: none;
+  }
+  body {
+    font-family: Montserrat;
+  }
+  .wrapper {
+    width: 375px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  button{
+    background-color: transparent;
+    border: 0;
+  }

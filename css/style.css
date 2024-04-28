@@ -1,3 +1,12 @@
-
+.white-square {
+  background-color: #fff;
+  padding: 14px;
+  width: 92px;
+  border-radius: 24px;
+}
+.white-square img {
+  width: 64px;
+  height: 64px;
+}
 
 /*# sourceMappingURL=style.css.map */
