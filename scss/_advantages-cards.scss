@@ -4,10 +4,11 @@
 @include helper.wrapper;
 $breakpoints: (
   tablet: 768px,
+  tablethd: 1024px,
   laptop: 1024px,
   desktop: 1440px,
+  desktophd: 1900px,
 );
-
 
 .background {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
@@ -39,12 +40,12 @@ $breakpoints: (
   }
 }
 
-.cards{
+.cards {
   display: grid;
   grid-template-columns: 315px;
   gap: 30px;
 }
-.card:first-child{
+.card:first-child {
   margin-top: 30px;
 }
 
@@ -76,6 +77,7 @@ $breakpoints: (
   background-color: #fff;
   padding: 14px;
   width: 92px;
+  height: 92px;
   border-radius: 24px;
 
   img {
@@ -90,11 +92,10 @@ $breakpoints: (
     width: 768px;
   }
   .cards {
-
     grid-template-columns: repeat(2, calc(50% - 30px));
     gap: 60px;
   }
-  .card:nth-child(2){
+  .card:nth-child(2) {
     margin-top: 30px;
   }
   .after-cards-shadow {
@@ -104,4 +105,3 @@ $breakpoints: (
     padding: 60px;
   }
 }
-

@@ -91,6 +91,7 @@ button {
   background-color: #fff;
   padding: 14px;
   width: 92px;
+  height: 92px;
   border-radius: 24px;
 }
 .white-square img {
@@ -173,14 +174,27 @@ button {
   height: 120px;
 }
 
-.sponsor-links a:nth-child(-n+6) {
-  display: flex;
+.centerd {
   justify-content: center;
   align-items: center;
 }
 
+.sponsor-links a:nth-child(-n+6) {
+  display: flex;
+}
+
 .sponsor-links a:nth-child(n+7) {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .sponsor-links {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+  }
+  .sponsor-links a:nth-child(n+7) {
+    display: grid;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

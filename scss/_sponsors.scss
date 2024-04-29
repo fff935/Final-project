@@ -1,3 +1,13 @@
+@use 'sass:map';
+@use './helper';
+$breakpoints: (
+  tablet: 768px,
+  tablethd: 1024px,
+  laptop: 1024px,
+  desktop: 1440px,
+  desktophd: 1900px,
+);
+
 .sponsor:nth-child(1) {
   background-color: #1c4280;
 }
@@ -38,12 +48,25 @@
   height: 120px;
 }
 
-.sponsor-links a:nth-child(-n + 6) {
-  display: flex;
+.centerd {
   justify-content: center;
   align-items: center;
 }
 
+.sponsor-links a:nth-child(-n + 6) {
+  display: flex;
+}
+
 .sponsor-links a:nth-child(n + 7) {
   display: none;
+}
+
+@media (min-width: map.get($breakpoints, 'tablet')) {
+  .sponsor-links {
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.33%));
+  }
+  .sponsor-links a:nth-child(n + 7) {
+    display: grid;
+  }
 }
