@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: Montserrat;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+}
+
+@mixin wrapper {
+  .wrapper {
+    width: 375px; /* Ваші стилі для ширини */
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+button {
+  background-color: transparent;
+  border: 0;
+}

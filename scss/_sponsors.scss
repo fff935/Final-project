@@ -1,0 +1,49 @@
+.sponsor:nth-child(1) {
+  background-color: #1c4280;
+}
+.sponsor:nth-child(2) {
+  background-color: #143646;
+}
+.sponsor:nth-child(3) {
+  background-color: #f48b30;
+}
+.sponsor:nth-child(4) {
+  background-color: #9e4dc3;
+}
+.sponsor:nth-child(5) {
+  background-color: #fd9339;
+}
+.sponsor:nth-child(6) {
+  background-color: #e2e2e4;
+}
+.sponsor:nth-child(7) {
+  background-color: #c71c36;
+}
+.sponsor:nth-child(8) {
+  background-color: #dcf3f9;
+}
+.sponsor:nth-child(9) {
+  background-color: #eaeaea;
+}
+.sponsor:nth-child(10) {
+  background-color: #282240;
+}
+.sponsor:nth-child(11) {
+  background-color: #1d4568;
+}
+.sponsor:nth-child(12) {
+  background-color: #000000;
+}
+.sponsor {
+  height: 120px;
+}
+
+.sponsor-links a:nth-child(-n + 6) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-links a:nth-child(n + 7) {
+  display: none;
+}
