@@ -5,24 +5,17 @@
 $breakpoints: (
   tablet: 768px,
   tablethd: 1024px,
-  laptop: 1024px,
-  desktop: 1440px,
-  desktophd: 1900px,
+  desktopsd: 1440px,
+  desktophd: 1920px,
 );
 
 .background {
   padding: 30px;
-  padding-bottom: 60px;
-  border-radius: 0px 0px 12px 12px;
-}
-
-.shadow{
-  display: flex;
-  justify-content: center;
 }
 
 .background-color {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+  border-radius: 0px 0px 12px 12px;
 }
 
 .services {
@@ -36,6 +29,7 @@ $breakpoints: (
   text-transform: uppercase;
   gap: 2px;
   margin-bottom: 10px;
+  display: inline-block;
 
   img {
     width: 12px;
@@ -120,3 +114,20 @@ $breakpoints: (
   }
 }
 
+@media (min-width: map.get($breakpoints, 'desktopsd')) {
+  @include helper.wrapper;
+  .wrapper {
+    width: 1440px;
+  }
+}
+
+@media (min-width: map.get($breakpoints, 'desktophd')) {
+  @include helper.wrapper;
+  .wrapper {
+    width: 1920px;
+  }
+  .background {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}

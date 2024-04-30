@@ -21,24 +21,18 @@ button {
 }
 
 .wrapper {
-  width: 375px; /* Ваші стилі для ширини */
+  min-width: 375px; /* Ваші стилі для ширини */
   margin-right: auto;
   margin-left: auto;
 }
 
 .background {
   padding: 30px;
-  padding-bottom: 60px;
-  border-radius: 0px 0px 12px 12px;
-}
-
-.shadow {
-  display: flex;
-  justify-content: center;
 }
 
 .background-color {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+  border-radius: 0px 0px 12px 12px;
 }
 
 .services {
@@ -52,6 +46,7 @@ button {
   text-transform: uppercase;
   gap: 2px;
   margin-bottom: 10px;
+  display: inline-block;
 }
 .services img {
   width: 12px;
@@ -104,7 +99,7 @@ button {
 
 @media (min-width: 768px) {
   .wrapper {
-    width: 375px; /* Ваші стилі для ширини */
+    min-width: 375px; /* Ваші стилі для ширини */
     margin-right: auto;
     margin-left: auto;
   }
@@ -124,7 +119,7 @@ button {
 }
 @media (min-width: 1024px) {
   .wrapper {
-    width: 375px; /* Ваші стилі для ширини */
+    min-width: 375px; /* Ваші стилі для ширини */
     margin-right: auto;
     margin-left: auto;
   }
@@ -137,6 +132,30 @@ button {
   }
   .card:nth-child(3) {
     margin-top: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    min-width: 375px; /* Ваші стилі для ширини */
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .wrapper {
+    width: 1440px;
+  }
+}
+@media (min-width: 1920px) {
+  .wrapper {
+    min-width: 375px; /* Ваші стилі для ширини */
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .wrapper {
+    width: 1920px;
+  }
+  .background {
+    padding-left: 160px;
+    padding-right: 160px;
   }
 }
 .sponsor:nth-child(1) {
@@ -215,8 +234,17 @@ button {
 }
 @media (min-width: 1024px) {
   .sponsor-links {
-    display: grid;
     grid-template-columns: repeat(4, 25%);
+  }
+}
+@media (min-width: 1920px) {
+  .sponsor-links {
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  .pad-f-links {
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
 

@@ -3,9 +3,8 @@
 $breakpoints: (
   tablet: 768px,
   tablethd: 1024px,
-  laptop: 1024px,
-  desktop: 1440px,
-  desktophd: 1900px,
+  desktopsd: 1440px,
+  desktophd: 1920px,
 );
 
 .sponsor:nth-child(1) {
@@ -73,7 +72,18 @@ $breakpoints: (
 
 @media (min-width: map.get($breakpoints, 'tablethd')) {
   .sponsor-links {
-    display: grid;
     grid-template-columns: repeat(4, 25%);
+  }
+}
+
+@media (min-width: map.get($breakpoints, 'desktophd')) {
+  .sponsor-links {
+    border-radius: 25px;
+    overflow: hidden;
+    
+  }
+  .pad-f-links{
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
