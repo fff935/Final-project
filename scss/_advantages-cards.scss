@@ -11,15 +11,18 @@ $breakpoints: (
 );
 
 .background {
-  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
   padding: 30px;
   padding-bottom: 60px;
   border-radius: 0px 0px 12px 12px;
 }
 
-.after-cards-shadow {
-  width: 375px;
-  height: 20px;
+.shadow{
+  display: flex;
+  justify-content: center;
+}
+
+.background-color {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
 }
 
 .services {
@@ -98,10 +101,22 @@ $breakpoints: (
   .card:nth-child(2) {
     margin-top: 30px;
   }
-  .after-cards-shadow {
-    width: 768px;
-  }
   .background {
     padding: 60px;
   }
 }
+
+@media (min-width: map.get($breakpoints, 'tablethd')) {
+  @include helper.wrapper;
+  .wrapper {
+    width: 1024px;
+  }
+  .cards {
+    grid-template-columns: repeat(3, calc(33.33% - 30px));
+    gap: 60px;
+  }
+  .card:nth-child(3) {
+    margin-top: 30px;
+  }
+}
+

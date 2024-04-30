@@ -27,15 +27,18 @@ button {
 }
 
 .background {
-  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
   padding: 30px;
   padding-bottom: 60px;
   border-radius: 0px 0px 12px 12px;
 }
 
-.after-cards-shadow {
-  width: 375px;
-  height: 20px;
+.shadow {
+  display: flex;
+  justify-content: center;
+}
+
+.background-color {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
 }
 
 .services {
@@ -115,11 +118,25 @@ button {
   .card:nth-child(2) {
     margin-top: 30px;
   }
-  .after-cards-shadow {
-    width: 768px;
-  }
   .background {
     padding: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 375px; /* Ваші стилі для ширини */
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .wrapper {
+    width: 1024px;
+  }
+  .cards {
+    grid-template-columns: repeat(3, calc(33.33% - 30px));
+    gap: 60px;
+  }
+  .card:nth-child(3) {
+    margin-top: 30px;
   }
 }
 .sponsor:nth-child(1) {
@@ -194,6 +211,12 @@ button {
   }
   .sponsor-links a:nth-child(n+7) {
     display: grid;
+  }
+}
+@media (min-width: 1024px) {
+  .sponsor-links {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
   }
 }
 

@@ -70,3 +70,10 @@ $breakpoints: (
     display: grid;
   }
 }
+
+@media (min-width: map.get($breakpoints, 'tablethd')) {
+  .sponsor-links {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+}
