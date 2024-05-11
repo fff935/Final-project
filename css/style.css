@@ -240,5 +240,88 @@ button {
     padding-left: 100px;
   }
 }
+.wrapper {
+  min-width: 375px; /* Ваші стилі для ширини */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.slider-content {
+  display: grid;
+  grid-template-columns: 315px;
+  justify-content: center;
+}
+
+.text-background {
+  background-color: #f5f5fa;
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+}
+.text-background a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 1px;
+  color: #24a3ff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.text-background svg {
+  width: 12px;
+  height: 12px;
+}
+.text-background a:hover svg path {
+  stroke: #f0145a;
+}
+.text-background a:hover {
+  color: #f0145a;
+}
+.text-background .slider-main-text {
+  background-image: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  color: transparent;
+  background-clip: text;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  word-wrap: break-word;
+}
+.text-background .slider-info {
+  display: grid;
+  gap: 6px;
+}
+.text-background .slider-info .slider-name {
+  color: #b3b3ba;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+}
+.text-background .slider-info .slider-ending {
+  line-height: 22px;
+  color: #b3b3ba;
+}
+
+.slider-circle {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.blue-circle {
+  width: 16px;
+  height: 16px;
+  background-color: #24a3ff;
+  border-radius: 50%; /* Заокруглені кути для створення круга */
+}
+
+.light-blue-circle {
+  width: 16px;
+  height: 16px;
+  background-color: rgba(36, 164, 255, 0.6431372549);
+  border-radius: 50%; /* Заокруглені кути для створення круга */
+}
 
 /*# sourceMappingURL=style.css.map */

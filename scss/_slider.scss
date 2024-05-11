@@ -1,0 +1,88 @@
+@use 'sass:map';
+@use './helper';
+@include helper.wrapper;
+$breakpoints: (
+  tablet: 768px,
+  tablethd: 1024px,
+  desktopsd: 1440px,
+  desktophd: 1920px,
+);
+
+.slider-content {
+  display: grid;
+  grid-template-columns: 315px;
+  justify-content: center;
+}
+
+.text-background {
+  background-color: #f5f5fa;
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+  a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 1px;
+    color: #24a3ff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+  a:hover svg path {
+    stroke: #f0145a;
+  }
+  a:hover {
+    color: #f0145a;
+  }
+
+  .slider-main-text {
+    background-image: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    color: transparent;
+    background-clip: text;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    word-wrap: break-word;
+  }
+
+  .slider-info {
+    display: grid;
+    gap: 6px;
+    .slider-name {
+      color: #b3b3ba;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19px;
+    }
+    .slider-ending {
+      line-height: 22px;
+      color: #b3b3ba;
+    }
+  }
+}
+
+.slider-circle{
+    display: flex;
+    justify-content: center;
+gap: 15px;
+margin-top: 30px;
+}
+
+.blue-circle {
+  width: 16px;
+  height: 16px;
+  background-color: #24a3ff;
+  border-radius: 50%; /* Заокруглені кути для створення круга */
+}
+.light-blue-circle {
+    width: 16px;
+    height: 16px;
+    background-color: #24a4ffa4;
+    border-radius: 50%; /* Заокруглені кути для створення круга */
+}
