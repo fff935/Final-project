@@ -67,6 +67,7 @@ a:hover svg path {
 
 .publication-card-text {
   line-height: 22px;
+  font-size: 14px;
 }
 
 .publication-text {
@@ -78,7 +79,64 @@ a:hover svg path {
   border-radius: 0 0 8px 8px;
 }
 
-.publication{
-    display: grid;
+.publication {
+  display: grid;
+  // justify-content: center;
+}
+@media (min-width: map.get($breakpoints, 'tablet')) {
+  .cards {
+    grid-template-columns: 309px 309px;
     justify-content: center;
+    grid-template-areas:
+      'top-left top-right'
+      'bottom bottom';
+  }
+
+  .top-left .publication-text,
+  .top-right .publication-text {
+    width: 309px;
+    height: 314px;
+  }
+
+  .bottom .publication-text {
+    width: 648px;
+  }
+  .top-left .publication-text {
+    grid-template-rows: repeat(3, 20px);
+  }
+}
+
+@media (min-width: map.get($breakpoints, 'tablethd')) {
+  .publications .cards {
+    grid-template-columns: repeat(3, 281px);
+  }
+  .top-left .publication-text,
+  .top-right .publication-text,
+  .bottom .publication-text {
+    width: 281px;
+    height: 356px;
+  }
+}
+
+@media (min-width: map.get($breakpoints, 'desktopsd')){
+    .publications .cards {
+        grid-template-columns: repeat(3, 420px);
+      }
+    .top-left .publication-text,
+  .top-right .publication-text,
+  .bottom .publication-text {
+    width: 420px;
+    height: 250px;
+  }
+}
+@media (min-width: map.get($breakpoints, 'desktophd')){
+    .publications .cards {
+        grid-template-columns: repeat(3, 513px);
+      }
+    .top-left .publication-text,
+  .top-right .publication-text,
+  .bottom .publication-text {
+    width: 513px;
+    height: 230px;
+  }
 }
