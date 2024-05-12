@@ -257,6 +257,7 @@ button {
   padding: 30px;
   display: grid;
   gap: 30px;
+  border-radius: 0 0 12px 12px;
 }
 .text-background a {
   font-size: 14px;
@@ -268,6 +269,7 @@ button {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  display: inline-block;
 }
 .text-background svg {
   width: 12px;
@@ -291,9 +293,11 @@ button {
 .text-background .slider-info {
   display: grid;
   gap: 6px;
+  align-content: center;
 }
 .text-background .slider-info .slider-name {
   color: #b3b3ba;
+  width: 255px;
   font-size: 16px;
   font-weight: 700;
   line-height: 19px;
@@ -322,6 +326,121 @@ button {
   height: 16px;
   background-color: rgba(36, 164, 255, 0.6431372549);
   border-radius: 50%; /* Заокруглені кути для створення круга */
+}
+
+@media (min-width: 768px) {
+  .slider-content {
+    grid-template-columns: 648px;
+  }
+  .text-background {
+    border-radius: 0 0 12px 12px;
+  }
+  .text-background .slider-main-text {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .text-background .slider-info .slider-name {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .slider-content {
+    grid-template-columns: 400px 504px;
+  }
+  .text-background {
+    border-radius: 0 12px 12px 0;
+  }
+}
+@media (min-width: 1440px) {
+  .slider-content {
+    grid-template-columns: 400px 920px;
+  }
+}
+@media (min-width: 1920px) {
+  .slider-content {
+    grid-template-columns: 400px 1200px;
+  }
+}
+.wrapper {
+  min-width: 375px; /* Ваші стилі для ширини */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.publications {
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+  background-color: #f5f5fa;
+}
+
+.more-publications {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 1px;
+  width: 136px;
+  color: #24a3ff;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.more-publications:hover {
+  color: #f0145a;
+}
+
+a:hover svg path {
+  stroke: #f0145a;
+}
+
+.header-publications {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  background-image: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  color: transparent;
+  background-clip: text;
+}
+
+.publication-card-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: #24a3ff;
+}
+
+.publication-card-date {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 1px;
+  color: #b3b3ba;
+}
+
+.hr {
+  background-color: #e6e6f0;
+  height: 4px;
+}
+
+.publication-card-text {
+  line-height: 22px;
+}
+
+.publication-text {
+  display: grid;
+  gap: 15px;
+  background-color: #fff;
+  padding: 30px;
+  width: 315px;
+  border-radius: 0 0 8px 8px;
+}
+
+.publication {
+  display: grid;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */

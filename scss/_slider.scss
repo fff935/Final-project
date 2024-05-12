@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use './helper';
+
 @include helper.wrapper;
 $breakpoints: (
   tablet: 768px,
@@ -19,6 +20,7 @@ $breakpoints: (
   padding: 30px;
   display: grid;
   gap: 30px;
+  border-radius: 0 0 12px 12px;
   a {
     font-size: 14px;
     font-weight: 700;
@@ -29,6 +31,7 @@ $breakpoints: (
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    display: inline-block;
   }
   svg {
     width: 12px;
@@ -54,8 +57,10 @@ $breakpoints: (
   .slider-info {
     display: grid;
     gap: 6px;
+    align-content: center;
     .slider-name {
       color: #b3b3ba;
+      width: 255px;
       font-size: 16px;
       font-weight: 700;
       line-height: 19px;
@@ -67,11 +72,11 @@ $breakpoints: (
   }
 }
 
-.slider-circle{
-    display: flex;
-    justify-content: center;
-gap: 15px;
-margin-top: 30px;
+.slider-circle {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
 }
 
 .blue-circle {
@@ -81,8 +86,45 @@ margin-top: 30px;
   border-radius: 50%; /* Заокруглені кути для створення круга */
 }
 .light-blue-circle {
-    width: 16px;
-    height: 16px;
-    background-color: #24a4ffa4;
-    border-radius: 50%; /* Заокруглені кути для створення круга */
+  width: 16px;
+  height: 16px;
+  background-color: #24a4ffa4;
+  border-radius: 50%; /* Заокруглені кути для створення круга */
+}
+@media (min-width: map.get($breakpoints, 'tablet')) {
+  .slider-content {
+    grid-template-columns: 648px;
+  }
+  .text-background {
+    border-radius: 0 0 12px 12px;
+    .slider-main-text {
+      font-size: 38px;
+      line-height: 46px;
+    }
+    .slider-info {
+        .slider-name {
+            width: 100%;
+        }
+    }
+  }
+}
+
+@media (min-width: map.get($breakpoints, 'tablethd')){
+    .slider-content {
+        grid-template-columns: 400px 504px;
+      } 
+      .text-background {
+        border-radius: 0 12px 12px 0;
+    }
+}
+
+@media (min-width: map.get($breakpoints, 'desktopsd')){
+    .slider-content {
+        grid-template-columns: 400px 920px;
+      } 
+}
+@media (min-width: map.get($breakpoints, 'desktophd')){
+    .slider-content {
+        grid-template-columns: 400px 1200px;
+      } 
 }

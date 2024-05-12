@@ -1,0 +1,84 @@
+@use 'sass:map';
+@use './helper';
+
+@include helper.wrapper;
+$breakpoints: (
+  tablet: 768px,
+  tablethd: 1024px,
+  desktopsd: 1440px,
+  desktophd: 1920px,
+);
+
+.publications {
+  padding: 30px;
+  display: grid;
+  gap: 30px;
+  background-color: #f5f5fa;
+}
+
+.more-publications {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: 1px;
+  width: 136px;
+  color: #24a3ff;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.more-publications:hover {
+  color: #f0145a;
+}
+a:hover svg path {
+  stroke: #f0145a;
+}
+
+.header-publications {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  background-image: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  color: transparent;
+  background-clip: text;
+}
+
+.publication-card-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: #24a3ff;
+}
+
+.publication-card-date {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 1px;
+  color: #b3b3ba;
+}
+
+.hr {
+  background-color: #e6e6f0;
+  height: 4px;
+}
+
+.publication-card-text {
+  line-height: 22px;
+}
+
+.publication-text {
+  display: grid;
+  gap: 15px;
+  background-color: #fff;
+  padding: 30px;
+  width: 315px;
+  border-radius: 0 0 8px 8px;
+}
+
+.publication{
+    display: grid;
+    justify-content: center;
+}
