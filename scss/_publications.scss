@@ -84,7 +84,7 @@ a:hover svg path {
   // justify-content: center;
 }
 @media (min-width: map.get($breakpoints, 'tablet')) {
-  .cards {
+  .publ-cards {
     grid-template-columns: 309px 309px;
     justify-content: center;
     grid-template-areas:
@@ -107,7 +107,7 @@ a:hover svg path {
 }
 
 @media (min-width: map.get($breakpoints, 'tablethd')) {
-  .publications .cards {
+  .publications .publ-cards {
     grid-template-columns: repeat(3, 281px);
   }
   .top-left .publication-text,
@@ -119,7 +119,7 @@ a:hover svg path {
 }
 
 @media (min-width: map.get($breakpoints, 'desktopsd')){
-    .publications .cards {
+    .publications .publ-cards {
         grid-template-columns: repeat(3, 420px);
       }
     .top-left .publication-text,
@@ -130,7 +130,7 @@ a:hover svg path {
   }
 }
 @media (min-width: map.get($breakpoints, 'desktophd')){
-    .publications .cards {
+    .publications .publ-cards {
         grid-template-columns: repeat(3, 513px);
       }
     .top-left .publication-text,

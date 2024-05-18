@@ -1,15 +1,8 @@
-@use 'sass:map';
-@use './helper';
+@use './helper' as helper;
 
 @include helper.wrapper;
-$breakpoints: (
-  tablet: 768px,
-  tablethd: 1024px,
-  desktopsd: 1440px,
-  desktophd: 1920px,
-);
 
-.advantages{
+.advantages {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
   border-radius: 0px 0px 12px 12px;
 }
@@ -84,13 +77,13 @@ $breakpoints: (
   }
 }
 
-@media (min-width: map.get($breakpoints, 'tablet')) {
+@media (min-width: 768px) {
   @include helper.wrapper;
   .wrapper {
     width: 768px;
   }
   .cards {
-    grid-template-columns: repeat(2, calc(50% - 30px));
+    //grid-template-columns: repeat(2, calc(50% - 30px));
     gap: 60px;
   }
   .background {
@@ -98,8 +91,7 @@ $breakpoints: (
   }
 }
 
-@media (min-width: map.get($breakpoints, 'tablethd')) {
-  @include helper.wrapper;
+@media (min-width: 1024px){
   .wrapper {
     width: 1024px;
   }
@@ -108,14 +100,14 @@ $breakpoints: (
   }
 }
 
-@media (min-width: map.get($breakpoints, 'desktopsd')) {
+@media (min-width: 1440px) {
   @include helper.wrapper;
   .wrapper {
     width: 1440px;
   }
 }
 
-@media (min-width: map.get($breakpoints, 'desktophd')) {
+@media (min-width: 1920px) {
   @include helper.wrapper;
   .wrapper {
     width: 1920px;

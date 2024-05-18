@@ -107,7 +107,6 @@ button {
     width: 768px;
   }
   .cards {
-    grid-template-columns: repeat(2, calc(50% - 30px));
     gap: 60px;
   }
   .background {
@@ -115,11 +114,6 @@ button {
   }
 }
 @media (min-width: 1024px) {
-  .wrapper {
-    min-width: 375px; /* Ваші стилі для ширини */
-    margin-right: auto;
-    margin-left: auto;
-  }
   .wrapper {
     width: 1024px;
   }
@@ -444,7 +438,7 @@ a:hover svg path {
 }
 
 @media (min-width: 768px) {
-  .cards {
+  .publ-cards {
     grid-template-columns: 309px 309px;
     justify-content: center;
     grid-template-areas: "top-left top-right" "bottom bottom";
@@ -462,7 +456,7 @@ a:hover svg path {
   }
 }
 @media (min-width: 1024px) {
-  .publications .cards {
+  .publications .publ-cards {
     grid-template-columns: repeat(3, 281px);
   }
   .top-left .publication-text,
@@ -473,7 +467,7 @@ a:hover svg path {
   }
 }
 @media (min-width: 1440px) {
-  .publications .cards {
+  .publications .publ-cards {
     grid-template-columns: repeat(3, 420px);
   }
   .top-left .publication-text,
@@ -484,7 +478,7 @@ a:hover svg path {
   }
 }
 @media (min-width: 1920px) {
-  .publications .cards {
+  .publications .publ-cards {
     grid-template-columns: repeat(3, 513px);
   }
   .top-left .publication-text,
