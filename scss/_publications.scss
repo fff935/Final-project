@@ -75,32 +75,27 @@ a:hover svg path {
   gap: 15px;
   background-color: #fff;
   padding: 30px;
-  width: 315px;
   border-radius: 0 0 8px 8px;
 }
 
-.publication {
+.ct{
   display: grid;
-  // justify-content: center;
+  justify-content: center;
 }
+
 @media (min-width: map.get($breakpoints, 'tablet')) {
   .publ-cards {
-    grid-template-columns: 309px 309px;
+    display: grid;
+    grid-template-columns: 50% 50%;
     justify-content: center;
+    gap: 20px;
     grid-template-areas:
       'top-left top-right'
       'bottom bottom';
   }
 
-  .top-left .publication-text,
-  .top-right .publication-text {
-    width: 309px;
-    height: 314px;
-  }
+  
 
-  .bottom .publication-text {
-    width: 648px;
-  }
   .top-left .publication-text {
     grid-template-rows: repeat(3, 20px);
   }
