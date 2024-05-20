@@ -273,8 +273,10 @@ button {
   background-color: #f5f5fa;
   padding: 30px;
   display: grid;
+  grid-template-columns: 100%;
   gap: 30px;
   border-radius: 0 0 12px 12px;
+  word-wrap: break-word;
 }
 .text-background a {
   font-size: 14px;
@@ -305,7 +307,6 @@ button {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
-  word-wrap: break-word;
 }
 .text-background .slider-info {
   display: grid;
