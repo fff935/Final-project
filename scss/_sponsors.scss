@@ -68,6 +68,7 @@ $breakpoints: (
   .sponsor-links a:nth-child(n + 7) {
     display: grid;
   }
+
 }
 
 @media (min-width: map.get($breakpoints, 'tablethd')) {
@@ -85,5 +86,10 @@ $breakpoints: (
   .pad-f-links{
     padding-right: 100px;
     padding-left: 100px;
+  }
+  .wrapper-sponsors {
+    min-width: 1720px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

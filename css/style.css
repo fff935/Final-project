@@ -234,6 +234,11 @@ button {
     padding-right: 100px;
     padding-left: 100px;
   }
+  .wrapper-sponsors {
+    min-width: 1720px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 .wrapper {
   min-width: 375px;
