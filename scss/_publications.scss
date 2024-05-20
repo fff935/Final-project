@@ -9,10 +9,20 @@ $breakpoints: (
   desktophd: 1920px,
 );
 
-.publications {
-  padding: 30px;
+section{
+  margin-bottom: 60px;
+}
+
+.publ-cards {
   display: grid;
   gap: 30px;
+}
+
+.pd {
+  padding: 50px;
+}
+
+.publications-bc {
   background-color: #f5f5fa;
 }
 
@@ -43,6 +53,7 @@ a:hover svg path {
   background-image: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
   color: transparent;
   background-clip: text;
+  margin-bottom: 30px;
 }
 
 .publication-card-name {
@@ -76,62 +87,61 @@ a:hover svg path {
   background-color: #fff;
   padding: 30px;
   border-radius: 0 0 8px 8px;
+  flex-grow: 1;
 }
 
-.ct{
-  display: grid;
-  justify-content: center;
+.publication-content {
+  display: grid; /* Або інший відповідний display */
+  flex-shrink: 0; /* Запобігання розтягуванню */
+  margin-bottom: auto; /* Піднімає елементи нагору, залишаючи вільний простір внизу */
+  gap: 15px;
+}
+
+.picture {
+  height: 200px;
+  width: 100%;
+}
+
+.rounded {
+  border-radius: 9px 9px 0 0;
+  object-fit: cover;
+}
+
+.publication {
+  display: flex;
+  flex-direction: column;
+
 }
 
 @media (min-width: map.get($breakpoints, 'tablet')) {
   .publ-cards {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     gap: 20px;
     grid-template-areas:
       'top-left top-right'
       'bottom bottom';
   }
-
-  
-
-  .top-left .publication-text {
-    grid-template-rows: repeat(3, 20px);
+  .bottom {
+    grid-area: bottom;
   }
 }
 
 @media (min-width: map.get($breakpoints, 'tablethd')) {
   .publications .publ-cards {
-    grid-template-columns: repeat(3, 281px);
-  }
-  .top-left .publication-text,
-  .top-right .publication-text,
-  .bottom .publication-text {
-    width: 281px;
-    height: 356px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'top-left top-right bottom';
   }
 }
 
-@media (min-width: map.get($breakpoints, 'desktopsd')){
-    .publications .publ-cards {
-        grid-template-columns: repeat(3, 420px);
-      }
-    .top-left .publication-text,
-  .top-right .publication-text,
-  .bottom .publication-text {
-    width: 420px;
-    height: 250px;
+@media (min-width: map.get($breakpoints, 'desktopsd')) {
+  .publications .publ-cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: map.get($breakpoints, 'desktophd')){
-    .publications .publ-cards {
-        grid-template-columns: repeat(3, 513px);
-      }
-    .top-left .publication-text,
-  .top-right .publication-text,
-  .bottom .publication-text {
-    width: 513px;
-    height: 230px;
+@media (min-width: map.get($breakpoints, 'desktophd')) {
+  .publications .publ-cards {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

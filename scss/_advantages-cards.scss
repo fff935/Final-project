@@ -2,11 +2,24 @@
 
 @include helper.wrapper;
 
-.advantages {
+.adv-bc {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
   border-radius: 0px 0px 12px 12px;
 }
-
+//--------------------------------
+.shadow-first{
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  background-color: #CACADB;
+  margin: 0 20px;
+}
+.shadow-second{
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  background-color: #E7E7F2;
+  margin: 0 40px;
+}
+//--------------------------------
 .background {
   padding: 30px;
   display: grid;
@@ -24,12 +37,15 @@
   text-transform: uppercase;
   gap: 2px;
   margin-bottom: 10px;
-  display: inline-block;
 
   img {
     width: 12px;
     height: 12px;
   }
+}
+
+.services:hover{
+  color: #F0145A;
 }
 
 .cards {
