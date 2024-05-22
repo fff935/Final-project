@@ -29,6 +29,8 @@ button {
 .adv-bc {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
   border-radius: 0px 0px 12px 12px;
+  display: grid;
+  gap: 30px;
 }
 
 .shadow-first {
@@ -47,6 +49,7 @@ button {
 
 .background {
   padding: 30px;
+  padding-top: 0;
   display: grid;
   justify-content: center;
 }
@@ -129,6 +132,10 @@ button {
   }
   .background {
     padding: 60px;
+    padding-top: 0;
+  }
+  .adv-bc {
+    gap: 60px;
   }
 }
 @media (min-width: 1024px) {
@@ -623,6 +630,124 @@ a:hover svg path {
   }
   .footer-adress, .footer-contacts, .license {
     display: flex;
+  }
+}
+.wrapper {
+  min-width: 375px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.scroll-element {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #b3b3ba;
+}
+
+.scroll-element-active {
+  background-image: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  color: transparent;
+  background-clip: text;
+}
+
+.scroll-hr-vertical {
+  display: none;
+  background-color: rgba(255, 255, 255, 0.3019607843);
+  width: 10px;
+  height: 303px;
+}
+
+.scroll-hr-horizontal {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3019607843);
+  margin: 30px 30px;
+}
+
+.scroll-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.scroll-text {
+  font-size: 19px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.scroll-content {
+  padding: 0 30px;
+}
+
+.scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+
+.scroll-inner {
+  display: flex;
+  gap: 30px;
+  overflow: auto;
+}
+.scroll-inner a {
+  flex-shrink: 0;
+}
+
+.scroll-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-element-active {
+  margin-left: 30px;
+}
+
+.scroll-element:hover {
+  color: #F0145A;
+}
+
+@media (min-width: 768px) {
+  .scroll-element-active {
+    margin-left: 60px;
+  }
+  .scroll-hr-horizontal {
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3019607843);
+    margin: 60px 60px;
+  }
+  .scroll-content {
+    padding: 0 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .scroll-hr-horizontal {
+    display: none;
+  }
+  .scroll-hr-vertical {
+    display: block;
+  }
+  .scroll-inner {
+    display: grid;
+    margin-right: 60px;
+  }
+  .scroll-flex {
+    display: flex;
+    align-items: center;
+  }
+  .scroll-section {
+    display: flex;
+    align-items: center;
+  }
+  .scroll {
+    width: 50%;
+  }
+  .scroll-element-active {
+    margin-left: 0;
+  }
+  .scroll-element {
+    text-align: right;
   }
 }
 

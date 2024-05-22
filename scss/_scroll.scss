@@ -1,0 +1,127 @@
+@use 'sass:map';
+@use './helper';
+
+@include helper.wrapper;
+$breakpoints: (
+  tablet: 768px,
+  tablethd: 1024px,
+  desktopsd: 1440px,
+  desktophd: 1920px,
+);
+
+.scroll-element {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #b3b3ba;
+}
+
+.scroll-element-active {
+  background-image: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  color: transparent;
+  background-clip: text;
+}
+//-----------------------------------
+.scroll-hr-vertical {
+  display: none;
+  background-color: #ffffff4d;
+  width: 10px;
+  height: 303px;
+}
+
+.scroll-hr-horizontal {
+  height: 4px;
+  background-color: #ffffff4d;
+  margin: 30px 30px;
+}
+//-----------------------------------
+
+.scroll-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.scroll-text {
+  font-size: 19px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.scroll-content {
+  padding: 0 30px;
+}
+//-----------------------------------
+
+.scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+
+.scroll-inner {
+  display: flex;
+  gap: 30px;
+  overflow: auto;
+
+  a {
+    flex-shrink: 0;
+  }
+}
+
+.scroll-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-element-active {
+  margin-left: 30px;
+}
+
+.scroll-element:hover{
+    color: #F0145A;
+}
+
+@media (min-width: map.get($breakpoints, 'tablet')) {
+  .scroll-element-active {
+    margin-left: 60px;
+  }
+  .scroll-hr-horizontal {
+    height: 4px;
+    background-color: #ffffff4d;
+    margin: 60px 60px;
+  }
+  .scroll-content {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: map.get($breakpoints, 'tablethd')){
+    .scroll-hr-horizontal{
+        display: none;
+    }
+    .scroll-hr-vertical{
+        display: block;
+    }
+    .scroll-inner {
+        display: grid;
+        margin-right: 60px;
+    }
+    .scroll-flex{
+        display: flex;
+        align-items: center;
+    }
+    .scroll-section{
+        display: flex;
+        align-items: center;
+    }
+    .scroll{
+        width: 50%;
+    }
+    .scroll-element-active {
+        margin-left: 0;
+      }
+      .scroll-element{
+        text-align: right;
+      }
+}

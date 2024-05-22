@@ -5,6 +5,9 @@
 .adv-bc {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
   border-radius: 0px 0px 12px 12px;
+  display: grid;
+  gap: 30px;
+
 }
 //--------------------------------
 .shadow-first{
@@ -22,6 +25,7 @@
 //--------------------------------
 .background {
   padding: 30px;
+  padding-top: 0;
   display: grid;
   justify-content: center;
 }
@@ -104,6 +108,10 @@
   }
   .background {
     padding: 60px;
+    padding-top: 0;
+  }
+  .adv-bc {
+    gap: 60px;
   }
 }
 
