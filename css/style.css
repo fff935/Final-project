@@ -705,7 +705,7 @@ a:hover svg path {
 }
 
 .scroll-element:hover {
-  color: #F0145A;
+  color: #f0145a;
 }
 
 @media (min-width: 768px) {
@@ -740,14 +740,37 @@ a:hover svg path {
     display: flex;
     align-items: center;
   }
+  .extra-wrapper {
+    display: flex;
+    align-items: center;
+    width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .scroll {
-    width: 50%;
+    width: 100%;
   }
   .scroll-element-active {
     margin-left: 0;
   }
   .scroll-element {
     text-align: right;
+  }
+}
+@media (min-width: 1440px) {
+  .extra-wrapper {
+    width: 1440px;
+  }
+  .scroll {
+    width: 50%;
+  }
+}
+@media (min-width: 1920px) {
+  .extra-wrapper {
+    width: 1920px;
+  }
+  .scroll {
+    width: 50%;
   }
 }
 

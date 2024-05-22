@@ -78,8 +78,8 @@ $breakpoints: (
   margin-left: 30px;
 }
 
-.scroll-element:hover{
-    color: #F0145A;
+.scroll-element:hover {
+  color: #f0145a;
 }
 
 @media (min-width: map.get($breakpoints, 'tablet')) {
@@ -96,32 +96,55 @@ $breakpoints: (
   }
 }
 
-@media (min-width: map.get($breakpoints, 'tablethd')){
-    .scroll-hr-horizontal{
-        display: none;
-    }
-    .scroll-hr-vertical{
-        display: block;
-    }
-    .scroll-inner {
-        display: grid;
-        margin-right: 60px;
-    }
-    .scroll-flex{
-        display: flex;
-        align-items: center;
-    }
-    .scroll-section{
-        display: flex;
-        align-items: center;
-    }
-    .scroll{
-        width: 50%;
-    }
-    .scroll-element-active {
-        margin-left: 0;
-      }
-      .scroll-element{
-        text-align: right;
-      }
+@media (min-width: map.get($breakpoints, 'tablethd')) {
+  .scroll-hr-horizontal {
+    display: none;
+  }
+  .scroll-hr-vertical {
+    display: block;
+  }
+  .scroll-inner {
+    display: grid;
+    margin-right: 60px;
+  }
+  .scroll-flex {
+    display: flex;
+    align-items: center;
+  }
+  .scroll-section {
+    display: flex;
+    align-items: center;
+  }
+  .extra-wrapper {
+    display: flex;
+    align-items: center;
+    width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .scroll {
+    width: 100%;
+  }
+  .scroll-element-active {
+    margin-left: 0;
+  }
+  .scroll-element {
+    text-align: right;
+  }
+}
+@media (min-width: map.get($breakpoints, 'desktopsd')) {
+  .extra-wrapper {
+    width: 1440px;
+  }
+  .scroll {
+    width: 50%;
+  }
+}
+@media (min-width: map.get($breakpoints, 'desktophd')) {
+  .extra-wrapper {
+    width: 1920px;
+  }
+  .scroll {
+    width: 50%;
+  }
 }
