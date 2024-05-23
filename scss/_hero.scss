@@ -9,8 +9,8 @@ $breakpoints: (
   desktophd: 1920px,
 );
 
-html{
-   scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -125,15 +125,76 @@ header {
 }
 //----------------------------------------
 
-.hero-centring{
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 30px;
+.hero-centring {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
 }
 
-.hero-down-button{
-    margin-right: auto;
-    margin-left: auto;
+.hero-down-button {
+  margin-right: auto;
+  margin-left: auto;
+}
+//--------------------------------------------------------
+.not-mobile,
+.hero-navigation {
+  display: none;
+}
+//--------------------------------------------------------
+
+@media (min-width: map.get($breakpoints, 'tablet')) {
+  .near-logo,
+  .devider,
+  .dropdown {
+    display: none;
+  }
+  .hero-navigation,
+  .not-mobile,
+  .hero-navigation {
+    display: block;
+  }
+  .hero-menu-top {
+    background-color: transparent;
+    padding: 50px 60px 30px 60px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-adress {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    color: #b3b3ba;
+  }
+  .logo-part svg {
+    width: 130px;
+    height: 60px;
+  }
+  .hero-menu-bottom {
+    padding: 0 0 0 60px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .hero-navigation {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.5px;
+    display: flex;
+    gap: 16px;
+
+    a {
+      color: #fff;
+    }
+  }
+  .hero-text {
+    width: 100%;
+  }
+}
+@media (min-width: map.get($breakpoints, 'tablethd')) {
+}
+@media (min-width: map.get($breakpoints, 'desktopsd')) {
+}
+@media (min-width: map.get($breakpoints, 'desktophd')) {
 }
