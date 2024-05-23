@@ -9,6 +9,10 @@ $breakpoints: (
   desktophd: 1920px,
 );
 
+html{
+   scroll-behavior: smooth;
+}
+
 header {
   background-image: url(../images/hero-background-img.svg);
   background-repeat: no-repeat;
@@ -41,63 +45,95 @@ header {
   color: #fff;
 }
 
-.lang-active{
-    background-color: #F0145A;
-    padding: 5px 7px;
-    border-radius: 8px;
+.lang-active {
+  background-color: #f0145a;
+  padding: 5px 7px;
+  border-radius: 8px;
 }
 
-.lang:hover{
-    background-color: #f0145a57;
-    padding: 5px 7px;
-    border-radius: 8px;
+.lang:hover {
+  background-color: #f0145a57;
+  padding: 5px 7px;
+  border-radius: 8px;
 }
 //______________________________________________________
-.near-logo{
-font-size: 20px;
-line-height: 24px;
-color: #fff;
+.near-logo {
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
 }
 
-.logo-part{
-    display: flex;
-    gap: 4px;
+.logo-part {
+  display: flex;
+  gap: 4px;
 }
 
-.hero-menu-bottom{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
+.hero-menu-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
 }
 
-.dropbtn{
-    padding: 0;
+.dropbtn {
+  padding: 0;
 }
-////////////////////////////////////////////////////////////////
-/* Стилі для випадаючого списку */
+//--------------------------------------
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    left: -130px;
+  display: none;
+  position: absolute;
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: -130px;
 }
 
 .dropdown-content a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
-////////////////////////////////////////////////////////////////
+//--------------------------------------
+
+.hero-text {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: center;
+  color: #fff;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+//--------------------------------------
+.hero-down-button-c:hover path {
+  stroke: #f0145a;
+}
+.hero-down-button-c:hover circle {
+  stroke: #f0145a;
+}
+//----------------------------------------
+
+.hero-centring{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.hero-down-button{
+    margin-right: auto;
+    margin-left: auto;
+}
