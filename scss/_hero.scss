@@ -1,0 +1,103 @@
+@use 'sass:map';
+@use './helper';
+
+@include helper.wrapper;
+$breakpoints: (
+  tablet: 768px,
+  tablethd: 1024px,
+  desktopsd: 1440px,
+  desktophd: 1920px,
+);
+
+header {
+  background-image: url(../images/hero-background-img.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero-menu-top {
+  background-color: #f5f5fa33;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-phone {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.5px;
+  text-align: right;
+  color: #fff;
+}
+
+.lang-active{
+    background-color: #F0145A;
+    padding: 5px 7px;
+    border-radius: 8px;
+}
+
+.lang:hover{
+    background-color: #f0145a57;
+    padding: 5px 7px;
+    border-radius: 8px;
+}
+//______________________________________________________
+.near-logo{
+font-size: 20px;
+line-height: 24px;
+color: #fff;
+}
+
+.logo-part{
+    display: flex;
+    gap: 4px;
+}
+
+.hero-menu-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.dropbtn{
+    padding: 0;
+}
+////////////////////////////////////////////////////////////////
+/* Стилі для випадаючого списку */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: -130px;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+////////////////////////////////////////////////////////////////
